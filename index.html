@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUNAL</title>
+</head>
+<style>
+    .navbar {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: rgb(65, 13, 13);;
+        padding-left: 50%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        float: right;
+    }
+    .navbarbuttons a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: x-large;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    .navbarbuttons1 a{
+        padding-left: 10;
+        padding-right: 10px;
+        font-size: x-large;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    .navbarbuttons1 a:hover{
+        background: white;
+        border: 5px;
+        border-radius: 3px;
+        color: black;
+    }    
+    .navbarbuttons a:hover{
+        background: white;
+        border: 5px;
+        border-radius: 3px;
+        color: black;
+    }
+    .footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+    }
+    .last{
+        padding-top: 2%;
+        width: 75%;
+        float: right;
+    }
+    .div1{
+        width: 75%;
+        float: right;
+        background-color: rgb(52, 52, 52);
+        border-radius: 10%;
+    }
+    .div2{
+        width: 75%;
+        float: right;
+        background-color: rgb(52, 52, 52);
+        border-radius: 10%;
+    }
+    .div3{
+        width: 75%;
+        float: right;
+        background-color: rgb(52, 52, 52);
+        border-radius: 10%;
+    }
+    .div4{
+        width: 75%;
+        float: right;
+        background-color: rgb(52, 52, 52);
+        border-radius: 10%;
+    }
+    .h1_1{
+        color: white;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding-top: 5%;
+        padding-bottom: 3%;
+        text-shadow: 2px 2px  rgb(190, 119, 26);
+        font-size: 270%;
+    }
+    .h3_1{
+        color: white;
+        padding-left: 10%;
+        text-decoration: underline;
+    }
+    .para1_1{
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .para2_1{
+        color: white;
+        padding-left: 11%;
+    }
+    .h4_1{
+        color: white;
+        padding-left: 11%;
+    }
+    .list1_1{
+        color: white;
+        padding-left: 11%;
+    }
+    .h5_1{
+        color: white;
+        padding-left: 11%;
+    }
+    .list2_1{
+        color: white;
+        padding-left: 11%;
+        list-style: square;
+    }
+    .p1_2{
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .h1_2{
+        color: white;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 3%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow: 2px 2px  rgb(190, 119, 26);;
+        font-size: 270%;
+    }
+    .p2_2{
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .p3_2{
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .p4_2{
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .p5_2{
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .h3_2{
+        color: white;
+        text-decoration: underline;
+        padding-left: 10%;
+        padding-right: 10%;    
+    }
+    .button_2 {
+        color: white;
+        background:none;
+        border: none;
+        text-decoration: underline;
+    }
+    .button_2a:hover{
+        color:black;
+        background-color: white;
+    }
+    .list_2{
+        padding-left: 10%;
+        padding-right: 10%;
+        color: white;
+    }
+    .center_2{
+        padding-bottom: 3%;
+    }
+    
+    .h1_3 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 2%;
+        text-shadow: 2px 2px  rgb(190, 119, 26);;
+        font-size: 270%;
+    }
+    .para_3 {
+        color: white;
+        font-size: large;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    /* .poem1_3 {
+        color: rgb(240, 236, 19);
+        background-color: red;
+        padding: 2%;
+        border-radius: 5%;
+    }
+
+    .poem2_3 {
+        color: rgb(240, 236, 19);
+        background-color: red;
+        padding: 2%;
+        border-radius: 5%;
+    } */
+
+    .divpoem1_3 {
+        padding-left: 10%;
+    }
+    .divpoem2_3 {
+        padding-left: 10%;
+    }
+    .readmore_3{
+        text-decoration: none;
+    }
+    .squirtel_4{
+
+        padding-bottom: 3%;
+    }
+    .love {
+        color: red;
+    }
+    .center_4{
+        padding-top: 90px;
+        padding-left: 30px;
+    }
+    .h1_4{
+        color: white;
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+        padding-top: 3%;
+        text-shadow: 2px 2px rgb(190, 119, 26);
+        font-size: 270%;
+    }
+    .h3_4{
+        color: white;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .para1_4{
+        color: white;
+        font-size: large;
+        padding-left: 27% ;
+    }
+    .para2_4{
+        color: white;
+        font-size: large;
+        padding-left: 20%;
+    }
+    .emaillink_4{
+        color: white;
+        text-decoration: none;
+        font-size: large;
+    }
+    .h4_4{
+        color: white;
+        text-align: center;
+    }
+    .list_4{
+        color: white;
+        font-size: large;
+        text-align: center;
+    }
+    .last_4{
+        padding-top: 70px;
+    }
+    .table_4{
+        padding-left: 10px;
+    }
+    .appusername_4 a{
+        color: white;
+        font-size: large;
+        padding-left: 5px;
+        padding-right: 35px;
+        text-decoration: none;
+    }
+    .social_4{
+        padding-left: 50px;
+    }
+    .faltu1{
+        padding-bottom: 3%;
+        height: 3%;
+    }
+    /* .toflex{
+        display: flex;
+    } */
+    .leftnavbar{
+        width: 25%;
+        background-color: #353935;
+        height: 100%;
+        position: fixed;
+        top: 0;
+    }
+    .image{
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+    .divimage{
+        padding-top: 30%;
+        text-align: center;
+    }
+    .navbutton{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        font-size: x-large;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        background-color: #353935;
+        border: none;
+    }
+    .navbuttondiv{
+        padding-left: 6%;
+        padding-top: 6%;
+    }
+    .div5{
+        width: 75%;
+        float: right;
+        background-color: rgb(52, 52, 52);
+        color: white;
+        border-radius: 10%;
+        padding-bottom: 3%;
+    }
+    .para1_5{
+        padding-left: 10%;
+    }
+    .table_5{
+        padding-left: 10%;
+    }
+    .imagediv{
+        width: 75%;
+        float: right;
+        background-image: url(20240128_231101-01.jpeg.jpg);
+        background-size: cover;
+    }
+    .hey{
+        padding-top: 15%;
+        padding-left: 70%;
+        padding-bottom: 22%;
+        color: white;
+    }
+    .space1{
+        width: 75%;
+        float: right;
+        color: rgb(70, 67, 67);
+    }
+    .space2{
+        width: 75%;
+        float: right;
+        color: rgb(70, 67, 67);
+    }
+    .space3{
+        width: 75%;
+        float: right;
+        color: rgb(70, 67, 67);
+    }
+    .h1_5{
+        color: white;
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+        padding-top: 3%;
+        text-shadow: 2px 2px rgb(190, 119, 26);
+        font-size: 270%;
+    }
+    .space5{
+        width: 75%;
+        padding-top: 5%;
+        float: right;
+        color: rgb(70, 67, 67);
+    }
+    .div1:hover{
+        background-color: rgb(52,48,52);
+        transition-duration: 0.5s;
+    }
+    .div2:hover{
+        background-color: rgb(52, 48, 52);
+        transition-duration: 0.5s;
+    }
+    .div3:hover{
+        background-color: rgb(52, 48, 52);
+        transition-duration: 0.5s;
+    }
+    .div4:hover{
+        background-color: rgb(52, 48, 52);
+        transition-duration: 0.5s;
+    }
+    .div5:hover{
+        background-color: rgb(52, 48, 52);
+        transition-duration: 0.5s;
+    }
+    .table_41{
+        padding-left: 9%;
+        padding-top: 5%;
+    }
+    .applogo_4{
+        padding-left: 10px;
+    }
+    .hey_h1{
+        font-size: 300%;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .navbarbuttona{
+        text-decoration: none;
+        color: white;
+    }
+    .navbarbuttona:hover{
+        background-color: white;
+        color: black;
+        border: 10px;
+        border-radius: 5px;
+    }
+    .applogo_41:hover{
+        width: 40px;
+    }
+</style>
+
+<!-- <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+        });
+    });
+    const hiddenElements = document.querySelectorAll('.div1','.div2','.div3','.div3','.div4','.div5')
+</script> -->
+
+<body style="background-color: rgb(70, 67, 67);">
+    <div class="navbar">`
+            <!-- <div class="forblue"></div> -->
+                <span class="navbarbuttons1"><a href="#amdiv">About Me</a></span>
+                <span class="navbarbuttons"><a href="#edudiv">Education</a></span>
+                <span class="navbarbuttons"><a href="#Skilldiv">Skills</a></span>
+                <span class="navbarbuttons"><a href="#hobbdiv">Hobbies</a></span>
+                <span class="navbarbuttons"><a href="#cmdiv">Contact Me</a></span>
+    </div>
+    <div class="leftnavbar">
+            <div class="divimage">
+            <img class="image" src="WhatsApp Image 2024-01-31 at 00.40.15_f16c3024.jpg" alt="myimage">
+            </div>
+            <div class="navbuttondiv">
+            <button class="navbutton"><a class="navbarbuttona" href="">Resume</a></button>
+            <button class="navbutton"><a class="navbarbuttona" href="">Cirriculam Vitae</a></button>
+            <button class="navbutton"><a class="navbarbuttona" href=""> Call Me</a></button>
+            </div>
+            <table class="table_41">
+                <tr>
+                    <td class="applogo_4"><a href="https://www.instagram.com" target="_blank" class="applogo_41"><img src="iglogo.webp" alt="Instagram" 
+                        width="35"></a></td>
+                    <td class="applogo_4"><a href="https://www.twitter.com" target="_blank" class="applogo_41"><img src="twitter.jpeg" alt="twitter" 
+                        width="35"></a></td>
+                    <td class="applogo_4"><a href="https://www.telegram.com" target="_blank" class="applogo_41"><img src="Telegram_2019_Logo.svg.png" 
+                        alt="Telegram" width="35"></a></td>  
+                    <td class="applogo_4"><a href="https://www.linkedin.com" target="_blank" class="applogo_41"><img src="702300.png" alt="Whatsapp" 
+                        width="35"></a></td>              
+                </tr>
+            </table>
+    </div>
+    <div class="space5">d</div>
+    <div class="imagediv">
+        <!-- <img class="myimg" src="20240128_231101-01.jpeg.jpg" alt="Kunal"> -->
+        <div  class="hey">
+        <h1 class="hey_h1">Hey!</h1>
+        <h1 class="hey_h1">I'm Kunal</h1>
+        <h1><span class="auto-type"></span></h1>
+        </div>
+    </div>
+    <div class="space1">c</div>
+    <div class="div5" id="amdiv">   
+    <h1 class="h1_5">About Me</h1> 
+    <p class="para1_5">I am Kunal, pursuing a Bachelor's in Technology at the Indian Institute of Information Technology. With a passion for technology and innovation, he actively engages in his studies, seeking to expand his knowledge in the ever-evolving field. Kunal's dedication extends beyond academics, as he explores various aspects of the tech world, keeping abreast of emerging trends. Known for his curiosity and enthusiasm, he embraces challenges and collaborates with peers. Outside the academic realm, Kunal enjoys exploring diverse interests, contributing to a well-rounded personality. With a bright and promising future ahead, he embodies the spirit of a young, ambitious technologist.</p>
+    <table class="table_5">
+        <tr>
+            <th>Date of Birth</th>
+            <td>23-10-2005</td>
+        </tr>
+        <tr>   
+            <th>Age</th>
+            <td>18</td>
+        </tr>
+        <tr>    
+            <th>Nationality</th>
+            <td>Indian</td>
+        </tr>
+        <tr>
+            <th>Residential Address</th>
+            <td>Rewari, Haryana</td>
+        </tr>
+    </table>
+    </div>
+    <div class="space1">f</div>
+    <div class="div1" id="edudiv">
+        <h1 class="h1_1">Educational Qualifications and Achievements</h1>
+        <h3 class="h3_1">Current Status</h3>
+        <p class="para1_1">I am currently pursuing Bachelor in Technology in Information Technology from Indian Institute of Information Technology, Allahabad (An Institute of National Importance by act of Parliament). Batch - 2023-27 </p>
+        <h3 class="h3_1">Qualifications</h3>
+        <p class="para2_1">10th(2019-2020) - 97.6% (From RPS Public School, Rewari)</p>
+        <p class="para2_1">12th(2022-2023) - 95.2% (From RPS Public School, Rewari)</p>
+        <h4 class="h4_1">Cleared JEE Mains and Advanced(2023)</h4>
+        <li class="list1_1">JEE Mains Rank:</li>
+        <li class="list1_1">JEE Advanced Rank:</li>
+        <div class="toflex1">
+        <h3 class="h3_1">Other Achievements</h3>
+        <p><h5 class="h5_1">Qualified National Talent Search Exam(NTSE)</h5>
+        <li class="list1_1"> Level 1 - 2020 (SCERT-Haryana)</li>
+        <li class="list1_1"> Level 2 - 2021 (NCERT)</li></p>
+        <p class="para2_1">Qualified NDA Written Exam twice(2021 & 2022)</p>
+        <p class="para2_1">Qualified Haryana Science Talent Search Exam</p>
+        </div>
+        <div class="toflex2">
+        <h3 class="h3_1">Co-cirricular Achievements</h3>
+        <p><li class="list2_1">Won several medals/Certificates in Debates, GDs, etc.</li>
+        <li class="list2_1">Participated in MUN in school and college and got certificates of distinguished participation</li>
+        <li class="list2_1">Got 1st position in Quizs in school</li></p>
+        </div>
+        <div class="faltu1"></div>
+    </div>
+    <div class="space2">f</div>
+    <div class="div2" id="Skilldiv">
+        <h1 class="h1_2">Skills</h1>
+        <p class="p1_2">As I am pursuing my B.Tech. from one the best Institute in field of Information Technology, I have knowledge of Basics of Programing Languages like C, C++ etc. I am learning Data Structures and have keen desire in exploring fields of Artificial Intelligence (AI) and Machine Learning (ML). I am good at Physics, Chemistry and Mathematics of 12th level and can mentor students preparing for JEE, BITS etc.</p> 
+        <p class="p2_2">Also have good kowledge of HTML, CSS and Javascript. And can make websites for you </p>
+        <p class="p3_2">Contact me on my LinkedIn if you want me to make a website for you or your company.</p>
+        <p class="p4_2">I have made some clones of Websites like Netflix, Spotify, Wanna See <button class="button_2" id="button1">CLICK HERE</button></p>
+        <p class="p5_2">Getting Bored and want to play tic-tac-toe with your friend <button class="button_2"><a class="button_2a" href="http://127.0.0.1:3000/tic_tac_toe.html" style="color:white;">CLICK HERE</a></button></p>
+        <H3 class="h3_2">Soft Skills</H3>
+        <li class="list_2">Good Speaking Skills and Group Discussion</li>
+        <li class="list_2">Good at Public Dealing and Decision-Making</li>
+        <li class="list_2">Good at Teamwork and Collabration</li>
+        <li class="list_2">Highly Adabtable in Dynamic Environments </li>
+        <li class="list_2">Good at Current Affairs and General Knowledge</li>
+        <li class="list_2">Good Anchor (have anchored in college events).</li>
+        <div class="faltu1"></div>
+    </div>
+    <div class="space3">e</div>
+    <div class="div3" id="hobbdiv" >
+        <h1 class="h1_3">Hobbies</h1>
+        <p class="para_3">I am very intrested in poetry. I like to listen and write poems. I am part of the literary
+            society of Indian Institute of Information Technology, Allahabad.Also I like reading old hindi literature.
+        </p>
+        <p class="para_3">I have intrest in Geopolitics and Ancient History. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Consequatur eum aliquam soluta minus dolor doloremque repellat facere quia et,
+            voluptatibus commodi, dignissimos dolorum? I also likes Classical Hindustani Music. </p>
+        <p class="para_3">My hobbies also include playing badminton, football etc. and I also like to watching movies.</p>
+        <!-- <p class="para_3">These are the most recent poem I have written:</p>
+        <div class="poems_3">
+            <div class="divpoem1_3">
+                <pre class="poem1_3">भारत सभ्यता बहुत पुरानी है
+ शौर्य पराक्रम की अत्भुत कहानी है    
+ रामायण की कथा है, श्रीराम का दर्शन है 
+ गीता का ज्ञान माधव का चक्र सुदर्शन है.... <a href="" class="readmore_3">Read More</a> &nbsp &nbsp &nbsp
+ </pre>
+            </div>
+            <div class="divpoem2_3">
+                <pre class="poem2_3">
+ 2023 शुरू हुआ, निफ्टी और सेंसेक्स में नया जोश था &nbsp &nbsp &nbsp &nbsp
+ अमरीकी बैंक डूब मंदी की आहट थी, IMF खामोश था
+ नई उम्मीदें, नई तकनीक, उड़ान नई 
+ मिलेट इयर मानकर बनाई पहचान नई.... <a href="" class="readmore_3">Read More</a>
+        </pre>
+            </div>
+        </div> -->
+    </div>
+    <div class="space3">f</div>
+    <div class="div4" id="cmdiv">
+        <div>
+            <h1 class="h1_4"><b>Contact Me</b></h1>
+        </div>
+        <br>
+        <DIV class="squirtel_4">
+        <div class="official_4">
+            <h3 class="h3_4"><b>E-Mail IDs</b></h3>
+            <p class="para1_4">
+                For Internships etc. you can mail me on following E-Mail IDs:
+                <li class="list_4">
+                    Personal E-Mail IDs: &nbsp &nbsp
+                    <a class="emaillink_4" href="kunalgunwal05@gmail.com">kunalgunwal05@gmail.com</a>
+
+                </li>
+                <li class="list_4">
+                    Institute E-Mail ID: &nbsp &nbsp
+                    <a class="emaillink_4" href="iit2023254@iiita.ac.in">iit2023254@iiita.ac.in</a>
+                </li>
+            </p>
+            <p>
+                <h4 class="h4_4">Pincode - 211015 (P.O. Jhalwa)</h4>
+            </p>
+        </div>
+        <br>
+        <div class="social_4">
+            <h3 class="h3_4">Social Media Accounts</h3>
+            <p class="para2_4">I am available on Social Media: </p>
+            <table class="table_4">
+                <tr>
+                    <td class="applogo_4"><a href="https://www.instagram.com" target="_blank"><img src="iglogo.webp" alt="Instagram"
+                                width="20"></a></td>
+                    <td class="appusername_4"><a href="https://www.instagram.com/kunal_gunwal/?next=%2F" target="_blank">kunal_gunwal</a></td>
+                    <td class="applogo_4"><a href="https://www.twitter.com" target="_blank"><img src="twitter.jpeg" alt="twitter"
+                                width="20"></a></td>
+                    <td class="appusername_4"><a href="https://twitter.com/kunalgunwal05" target="_blank">@Kunalgunwal</a></td>
+                 <td class="applogo_4"><a href="https://www.telegram.com" target="_blank"><img src="Telegram_2019_Logo.svg.png"
+                                alt="Telegram" width="20"></a></td>
+                    <td class="appusername_4"><a href="">@kunalgunwal</a></td>
+                  <td class="applogo_4"><a href="https://www.linkedin.com" target="_blank"><img src="702300.png" alt="Whatsapp"
+                                width="20"></a></td>
+                    <td class="appusername_4"><a href="https://www.linkedin.com/in/kunal-gunwal-71873a292/" target="_blank">Kunal Gunwal</a></td>
+                </tr>
+            </table>
+        </div>
+        </DIV>
+    </div>  
+    <div class="last">
+        <footer class="footer">
+            <p><b>&#169 2024 All rights reserved</p>
+            <p>Developed with <span class="love">&#10084</span> by KUNAL</b></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", { strings: ["Developer", "Freelancer", "Proud Indian"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+</body>
+</html>
