@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+    margin: 20px 0;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.status {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.scores {
+    margin: 10px 0;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const board = document.getElementById('board');
+    const status = document.getElementById('status');
+    const scores = document.getElementById('scores');
+    const resetBtn = document.getElementById('resetBtn');
+    let currentPlayer = 'X';
+    let gameBoard = ['', '', '', '', '', '', '', '', ''];
+    let gameOver = false;
+    let scoresData = { 'X': 0, 'O': 0 };
+
+    const renderBoard = () => {
+        board.innerHTML = '';
+        gameBoard.forEach((value, index) => {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.textContent = value;
+            cell.addEventListener('click', () => handleCellClick(index));
+            board.appendChild(cell);
+        });
+    };
+
+    const handleCellClick = (index) => {
+        if (!gameOver && gameBoard[index] === '') {
+            gameBoard[index] = currentPlayer;
+            renderBoard();
+            checkWinner();
+            togglePlayer();
+        }
+    };
+
+    const togglePlayer = () => {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        status.textContent = `Player ${currentPlayer}'s turn`;
+    };
+
+    const checkWinner = () => {
+        const winPatterns = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+            [0, 4, 8], [2, 4, 6]             // Diagonals
+        ];
+
+        for (const pattern of winPatterns) {
+            const [a, b, c] = pattern;
+            if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+                gameOver = true;
+                declareWinner(gameBoard[a]);
+                return;
+            }
+        }
+
+        if (!gameBoard.includes('')) {
+            gameOver = true;
+            declareWinner('Draw');
+        }
+    };
+
+    const declareWinner = (winner) => {
+        if (winner === 'Draw') {
+            status.textContent = 'It\'s a draw!';
+        } else {
+            status.textContent = `Player ${winner} wins!`;
+            scoresData[winner]++;
+            updateScores();
+        }
+    };
+
+    const updateScores = () => {
+        scores.textContent = `Scores: Player X - ${scoresData['X']}, Player O - ${scoresData['O']}`;
+    };
+
+    const resetGame = () => {
+        currentPlayer = 'X';
+        gameBoard = ['', '', '', '', '', '', '', '', ''];
+        gameOver = false;
+        renderBoard();
+        status.textContent = `Player ${currentPlayer}'s turn`;
+    };
+
+    resetBtn.addEventListener('click', resetGame);
+
+    // Initial setup
+    renderBoard();
+});
+</script>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="board" class="board"></div>
+        <div id="status" class="status">Player X's turn</div>
+        <div id="scores" class="scores">Scores: Player X - 0, Player O - 0</div>
+        <button id="resetBtn">Reset Game</button>
+        <button><a href="http://127.0.0.1:3000/tic_tac_toe.html" style="text-decoration: none;color: black;">Refresh Page</a></button>
+    </div>
+</body>
+</html>
