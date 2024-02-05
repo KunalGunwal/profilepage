@@ -6,8 +6,25 @@
     <title>KUNAL</title>
 </head>
 <style>
+    .top{
+        height: 6px;
+        width: 100%;
+        background-color: orange;
+        transform-origin: left;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        scale: 0 1;
+        animation: scrollwatcher linear;
+        animation-timeline: scroll();
+    }
+    @keyframes scrollwatcher{
+        to{
+            scale: 1 1;
+        }
+    }
     .navbar {
-        padding-top: 2%;
+        padding-top: 2.5%;
         padding-bottom: 2%;
         background-color: rgb(65, 13, 13);;
         padding-left: 50%;
@@ -34,7 +51,7 @@
     }
     .navbarbuttons1 a:hover{
         background: white;
-        border: 5px;
+        border-bottom: 2%;
         border-radius: 3px;
         color: black;
     }    
@@ -165,12 +182,10 @@
         color: white;
         background:none;
         border: none;
-        text-decoration: underline;
+        text-decoration: none;
     }
     .button_2 a:hover{
-        color: black;
-        background-color: white;
-        border-radius:3px;
+        text-decoration: underline;
     }
     .list_2{
         padding-left: 10%;
@@ -257,6 +272,9 @@
         color: white;
         text-decoration: none;
         font-size: large;
+    }
+    .emaillink_4:hover{
+        text-decoration: underline;
     }
     .h4_4{
         color: white;
@@ -376,6 +394,11 @@
         float: right;
         color: rgb(70, 67, 67);
     }
+    .tableheader_5{
+        text-align: left;
+        column-width: 40vh;
+        padding-right: 4%;
+    }
     .div1:hover{
         background-color: rgb(52,48,52);
         transition-duration: 0.5s;
@@ -403,6 +426,9 @@
     .applogo_4{
         padding-left: 10px;
     }
+    .applogo_4 a:hover{
+        animation: mymove 5s infinite;
+    }
     .hey_h1{
         font-size: 300%;
     }
@@ -412,15 +438,39 @@
     .navbarbuttona{
         text-decoration: none;
         color: white;
+        padding-bottom: 10px;
     }
     .navbarbuttona:hover{
-        background-color: white;
-        color: black;
-        border: 10px;
-        border-radius: 5px;
+        text-decoration: underline;
     }
-    .applogo_41:hover{
-        width: 40px;
+    .appusername_4 a:hover{
+        text-decoration: underline;
+    }
+    .instituteweblink{
+        color: white;
+        text-decoration: none;
+    }
+    .instituteweblink:hover{
+        text-decoration: underline;
+    }
+    .schoolwebsite{
+        color: white;
+        text-decoration: none;
+    }
+    .schoolwebsite:hover{
+        text-decoration: underline;
+    }
+    #dateTime{
+        color: white;
+        padding-left: 10%;
+        padding-right: 30%;
+    }
+    .applogo_411{
+        width: 35px;
+        -webkit-transition: -webkit-transform 1s;
+    }
+    .applogo_411:hover{
+        -webkit-transform: rotate(360deg) translateZ(0);
     }
 </style>
 
@@ -437,6 +487,9 @@
 </script> -->
 
 <body style="background-color: rgb(70, 67, 67);">
+    <div class="top">
+
+    </div>
     <div class="navbar">`
             <!-- <div class="forblue"></div> -->
                 <span class="navbarbuttons1"><a href="#amdiv">About Me</a></span>
@@ -450,22 +503,39 @@
             <img class="image" src="WhatsApp Image 2024-01-31 at 00.40.15_f16c3024.jpg" alt="myimage">
             </div>
             <div class="navbuttondiv">
-            <button class="navbutton"><a class="navbarbuttona" href="">Resume</a></button>
-            <br>
-            <button class="navbutton"><a class="navbarbuttona" href="">Cirriculam Vitae</a></button>
+            <button class="navbutton"><a class="navbarbuttona" href="file.pdf" download="">Resume</a></button>
+            <button class="navbutton"><a class="navbarbuttona" href="file.pdf">Cirriculam Vitae</a></button>
+            <!-- <button class="navbutton"><a class="navbarbuttona" href=""> Call Me</a></button> -->
             </div>
             <table class="table_41">
                 <tr>
-                    <td class="applogo_4"><a href="https://www.instagram.com" target="_blank" class="applogo_41"><img src="iglogo.webp" alt="Instagram" 
-                        width="35"></a></td>
-                    <td class="applogo_4"><a href="https://www.twitter.com" target="_blank" class="applogo_41"><img src="twitter.jpeg" alt="twitter" 
-                        width="35"></a></td>
-                    <td class="applogo_4"><a href="https://www.telegram.com" target="_blank" class="applogo_41"><img src="Telegram_2019_Logo.svg.png" 
-                        alt="Telegram" width="35"></a></td>  
-                    <td class="applogo_4"><a href="https://www.linkedin.com" target="_blank" class="applogo_41"><img src="702300.png" alt="Whatsapp" 
-                        width="35"></a></td>              
+                    <td class="applogo_4"><a href="https://www.instagram.com" target="_blank" class="applogo_41"><img class="applogo_411" src="iglogo.webp" alt="Instagram" 
+                        ></a></td>
+                    <td class="applogo_4"><a href="https://www.twitter.com" target="_blank" class="applogo_41"><img class="applogo_411" src="twitter.jpeg" alt="twitter" 
+                        ></a></td>
+                    <td class="applogo_4"><a href="https://www.telegram.com" target="_blank" class="applogo_41"><img class="applogo_411" src="Telegram_2019_Logo.svg.png" 
+                        alt="Telegram"></a></td>  
+                    <td class="applogo_4"><a href="https://www.linkedin.com" target="_blank" class="applogo_41"><img class="applogo_411" src="702300.png" alt="Whatsapp" ></a></td>              
                 </tr>
             </table>
+            <div>
+                <h5 id="dateTime"></h5>
+
+                <script>
+                    function updateDateTime() {
+                        var currentDate = new Date();
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+                        var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
+                        document.getElementById('dateTime').textContent = formattedDateTime;
+                    }
+            
+                    // Call the function initially
+                    updateDateTime();
+            
+                    // Update the date and time every second
+                    setInterval(updateDateTime, 1000);
+                </script>
+            </div>
     </div>
     <div class="space5">d</div>
     <div class="imagediv">
@@ -479,22 +549,22 @@
     <div class="space1">c</div>
     <div class="div5" id="amdiv">   
     <h1 class="h1_5">About Me</h1> 
-    <p class="para1_5">I am Kunal, pursuing a Bachelor's in Technology at the Indian Institute of Information Technology. With a passion for technology and innovation, he actively engages in his studies, seeking to expand his knowledge in the ever-evolving field. Kunal's dedication extends beyond academics, as he explores various aspects of the tech world, keeping abreast of emerging trends. Known for his curiosity and enthusiasm, he embraces challenges and collaborates with peers. Outside the academic realm, Kunal enjoys exploring diverse interests, contributing to a well-rounded personality. With a bright and promising future ahead, he embodies the spirit of a young, ambitious technologist.</p>
+    <p class="para1_5">I am Kunal, pursuing Bachelor's of Technology at the Indian Institute of Information Technology, Allahabad (Prayagraj). With a passion for technology and innovation, I actively engages in my studies, seeking to expand my knowledge in the ever-evolving fields. My dedication extends beyond academics, as I explores various aspects of the tech world, keeping abreast of emerging trends. Known for my curiosity and enthusiasm, I embraces challenges and collaborates with peers. Outside the academic realm, I enjoys exploring diverse interests, contributing to a well-rounded personality. With a bright and promising future ahead, I embodies the spirit of a young, ambitious technologist.</p>
     <table class="table_5">
         <tr>
-            <th>Date of Birth</th>
+            <th class="tableheader_5">Date of Birth</th>
             <td>23-10-2005</td>
         </tr>
         <tr>   
-            <th>Age</th>
+            <th class="tableheader_5">Age</th>
             <td>18</td>
         </tr>
         <tr>    
-            <th>Nationality</th>
+            <th class="tableheader_5">Nationality</th>
             <td>Indian</td>
         </tr>
         <tr>
-            <th>Residential Address</th>
+            <th class="tableheader_5">Residential Address</th>
             <td>Rewari, Haryana</td>
         </tr>
     </table>
@@ -503,13 +573,13 @@
     <div class="div1" id="edudiv">
         <h1 class="h1_1">Educational Qualifications and Achievements</h1>
         <h3 class="h3_1">Current Status</h3>
-        <p class="para1_1">I am currently pursuing Bachelor in Technology in Information Technology from Indian Institute of Information Technology, Allahabad (An Institute of National Importance by act of Parliament). Batch - 2023-27 </p>
+        <p class="para1_1">I am currently pursuing Bachelor of Technology in Information Technology from <a class= "instituteweblink" href="https://www.iiita.ac.in" target="_blank">Indian Institute of Information Technology, Allahabad</a> (An Institute of National Importance by act of Parliament). Batch - 2023-27 </p>
         <h3 class="h3_1">Qualifications</h3>
-        <p class="para2_1">10th(2019-2020) - 97.6% (From RPS Public School, Rewari)</p>
-        <p class="para2_1">12th(2022-2023) - 95.2% (From RPS Public School, Rewari)</p>
+        <p class="para2_1">10th(2019-2020) - 97.6% (From <a class="schoolwebsite" href="https://rpsrewari.edu.in/" target="_blank">RPS Public School</a>, Rewari)</p>
+        <p class="para2_1">12th(2022-2023) - 95.2% (From <a class="schoolwebsite" href="https://rpsrewari.edu,in" target="_blank">RPS Public School</a>, Rewari)</p>
         <h4 class="h4_1">Cleared JEE Mains and Advanced(2023)</h4>
-        <li class="list1_1">JEE Mains Rank:</li>
-        <li class="list1_1">JEE Advanced Rank:</li>
+        <li class="list1_1">JEE Mains Rank: 9456</li>
+        <li class="list1_1">JEE Advanced Rank: 13013</li>
         <div class="toflex1">
         <h3 class="h3_1">Other Achievements</h3>
         <p><h5 class="h5_1">Qualified National Talent Search Exam(NTSE)</h5>
@@ -521,26 +591,26 @@
         <div class="toflex2">
         <h3 class="h3_1">Co-cirricular Achievements</h3>
         <p><li class="list2_1">Won several medals/Certificates in Debates, GDs, etc.</li>
-        <li class="list2_1">Participated in MUN in school and college and got certificates of distinguished participation</li>
-        <li class="list2_1">Got 1st position in Quizs in school</li></p>
+        <li class="list2_1">Participated in MUN in school and institute and got certificates of distinguished participation</li>
+        <li class="list2_1">Got 1st position in Quizzes in school</li></p>
         </div>
         <div class="faltu1"></div>
     </div>
     <div class="space2">f</div>
     <div class="div2" id="Skilldiv">
         <h1 class="h1_2">Skills</h1>
-        <p class="p1_2">As I am pursuing my B.Tech. from one the best Institute in field of Information Technology, I have knowledge of Basics of Programing Languages like C, C++ etc. I am learning Data Structures and have keen desire in exploring fields of Artificial Intelligence (AI) and Machine Learning (ML). I am good at Physics, Chemistry and Mathematics of 12th level and can mentor students preparing for JEE, BITS etc.</p> 
+        <p class="p1_2">As I am pursuing my B.Tech from one the best Institute in field of Information Technology, I have knowledge of Basics of Programing Languages like C, C++ etc. I am learning Data Structures and have keen desire in exploring fields of Artificial Intelligence (AI) and Machine Learning (ML). I am good at Physics, Chemistry and Mathematics of 12th level and can mentor students preparing for JEE, BITS etc.</p> 
         <p class="p2_2">Also have good kowledge of HTML, CSS and Javascript. And can make websites for you </p>
         <p class="p3_2">Contact me on my LinkedIn if you want me to make a website for you or your company.</p>
-        <p class="p4_2">I have made some clones of Websites like Netflix, Spotify, etc. 
-        <p class="p5_2">Getting Bored and want to play tic-tac-toe with your friend <span class="button_2"><a class="button_2a" target="_blank" href="/tic_tac_toe.html">CLICK HERE</a></span></p> 
+        <!-- <p class="p4_2">I have made some clones of Websites like Netflix, Spotify etc.  -->
+        <!-- <p class="p5_2">Getting Bored and want to play tic-tac-toe with your friend <span class="button_2"><a class="button_2a" href="http://127.0.0.1:3000/tic_tac_toe.html">CLICK HERE</a></span></p> -->
         <H3 class="h3_2">Soft Skills</H3>
         <li class="list_2">Good Speaking Skills and Group Discussion</li>
         <li class="list_2">Good at Public Dealing and Decision-Making</li>
         <li class="list_2">Good at Teamwork and Collabration</li>
         <li class="list_2">Highly Adabtable in Dynamic Environments </li>
-        <li class="list_2">Good at Current Affairs and General Knowledge</li>
-        <li class="list_2">Good Anchor (have anchored in college events).</li>
+        <!-- <li class="list_2">Good at Current Affairs and General Knowledge</li> -->
+        <!-- <li class="list_2">Good Anchor (have anchored in college events).</li> -->
         <div class="faltu1"></div>
     </div>
     <div class="space3">e</div>
@@ -553,6 +623,7 @@
             adipisicing elit. Consequatur eum aliquam soluta minus dolor doloremque repellat facere quia et,
             voluptatibus commodi, dignissimos dolorum? I also likes Classical Hindustani Music. </p>
         <p class="para_3">My hobbies also include playing badminton, football etc. and I also like to watching movies.</p>
+        <P class="para_3">To read some of poems writen by me &nbsp <span class="button_2"> <a href="">Click Here</a></span></P>
         <!-- <p class="para_3">These are the most recent poem I have written:</p>
         <div class="poems_3">
             <div class="divpoem1_3">
@@ -571,6 +642,7 @@
         </pre>
             </div>
         </div> -->
+        <br>
     </div>
     <div class="space3">f</div>
     <div class="div4" id="cmdiv">
@@ -585,19 +657,19 @@
                 For Internships etc. you can mail me on following E-Mail IDs:
                 <li class="list_4">
                     Personal E-Mail IDs: &nbsp &nbsp
-                    <a class="emaillink_4" href="kunalgunwal05@gmail.com">kunalgunwal05@gmail.com</a>
+                    <a class="emaillink_4" href="mailto:kunalgunwal05@gmail.com">kunalgunwal05@gmail.com</a>
 
                 </li>
                 <li class="list_4">
                     Institute E-Mail ID: &nbsp &nbsp
-                    <a class="emaillink_4" href="iit2023254@iiita.ac.in">iit2023254@iiita.ac.in</a>
+                    <a class="emaillink_4" href="mailto:iit2023254@iiita.ac.in">iit2023254@iiita.ac.in</a>
                 </li>
             </p>
+            <p class="para1_4">Click these mail ID's to directly mail me</p>
             <p>
                 <h4 class="h4_4">Pincode - 211015 (P.O. Jhalwa)</h4>
             </p>
         </div>
-        <br>
         <div class="social_4">
             <h3 class="h3_4">Social Media Accounts</h3>
             <p class="para2_4">I am available on Social Media: </p>
@@ -611,7 +683,7 @@
                     <td class="appusername_4"><a href="https://twitter.com/kunalgunwal05" target="_blank">@Kunalgunwal</a></td>
                  <td class="applogo_4"><a href="https://www.telegram.com" target="_blank"><img src="Telegram_2019_Logo.svg.png"
                                 alt="Telegram" width="20"></a></td>
-                    <td class="appusername_4"><a href="">@kunalgunwal</a></td>
+                    <td class="appusername_4"><a href="https://t.me/kunalgunwal">@kunalgunwal</a></td>
                   <td class="applogo_4"><a href="https://www.linkedin.com" target="_blank"><img src="702300.png" alt="Whatsapp"
                                 width="20"></a></td>
                     <td class="appusername_4"><a href="https://www.linkedin.com/in/kunal-gunwal-71873a292/" target="_blank">Kunal Gunwal</a></td>
